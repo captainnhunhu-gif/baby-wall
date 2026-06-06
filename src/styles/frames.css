@@ -1,0 +1,322 @@
+/* ─── Shared frame base ─────────────────────────────────────────────────── */
+.frame-card {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, box-shadow 2s ease, filter 2s ease;
+}
+
+.frame-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-inner img,
+.frame-inner .frame-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.frame-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ─── Frame 1 — Oval Gold (182×210) ────────────────────────────────────── */
+.frame-1 {
+  width: 182px;
+  height: 210px;
+  border-radius: 50%;
+  border: 5px double #C8A84B;
+  outline: 2px solid #E8C86B;
+  outline-offset: 3px;
+  box-shadow:
+    0 0 0 1px #9A7A30,
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2),
+    inset 0 1px 3px rgba(255,220,100,0.3);
+}
+.frame-1 .frame-inner { border-radius: 50%; }
+
+/* ─── Frame 2 — Ornate Gilded (218×240) ─────────────────────────────────── */
+.frame-2 {
+  width: 218px;
+  height: 240px;
+  border: 6px solid #C8A84B;
+  outline: 3px solid #8B6914;
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 3px #D4A843,
+    inset 0 0 0 6px #F0D080,
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2);
+}
+
+/* ─── Frame 3 — Dark Baroque (224×260) ──────────────────────────────────── */
+.frame-3 {
+  width: 224px;
+  height: 260px;
+  border: 14px solid #3D2B1F;
+  box-shadow:
+    inset 0 0 0 2px #6B4A35,
+    inset 4px 4px 10px rgba(0,0,0,0.5),
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2),
+    0 0 0 1px #2A1A10;
+}
+
+/* ─── Frame 4 — Thin Mahogany (180×218) ─────────────────────────────────── */
+.frame-4 {
+  width: 180px;
+  height: 218px;
+  border: 5px solid #6B2D2D;
+  box-shadow:
+    inset 0 0 0 1px #8B4444,
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2);
+}
+
+/* ─── Frame 5 — Red Lacquer (204×224) ───────────────────────────────────── */
+.frame-5 {
+  width: 204px;
+  height: 224px;
+  border: 9px solid #8B1A1A;
+  outline: 2px solid #6B1414;
+  outline-offset: -4px;
+  box-shadow:
+    inset 0 0 0 2px #AA3333,
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2);
+}
+
+/* ─── Frame 6 — Round Rustic (180×180) ──────────────────────────────────── */
+.frame-6 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 11px solid #8B6914;
+  background: radial-gradient(circle, #7A5C10 0%, #5C4208 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255,200,80,0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.3),
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2);
+}
+.frame-6 .frame-inner { border-radius: 50%; }
+
+/* ─── Frame 7 — Large Ornate (252×280) ──────────────────────────────────── */
+.frame-7 {
+  width: 252px;
+  height: 280px;
+  border: 10px solid #5C3A1E;
+  box-shadow:
+    inset 0 0 0 2px #C8A84B,
+    inset 0 0 0 5px #5C3A1E,
+    inset 0 0 0 7px #C8A84B,
+    0 0 0 2px #3A2010,
+    4px 6px 18px rgba(0,0,0,0.35),
+    2px 3px 6px rgba(0,0,0,0.2),
+    8px 10px 28px rgba(0,0,0,0.25);
+}
+
+/* ─── Frame Baby — Center Star (260×296) ────────────────────────────────── */
+.frame-baby {
+  width: 260px;
+  height: 296px;
+  border: 7px solid #FFF8E7;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 0 0 2px #FFD700,
+    inset 0 0 0 6px #FFF8E7,
+    0 0 0 3px #C8A84B,
+    0 0 32px rgba(255, 215, 0, 0.45),
+    0 0 60px rgba(255, 215, 0, 0.18),
+    4px 6px 22px rgba(0,0,0,0.32),
+    2px 3px 8px rgba(0,0,0,0.18);
+  background: #FFFDE7;
+}
+
+.frame-baby::before {
+  content: '★';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255,215,0,0.8), -16px 2px 0 #FFD700, 16px 2px 0 #FFD700;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ─── Desktop scattered positions (> 900px) ─────────────────────────────── */
+/* Top row */
+.frame-pos-1 { top: 5%;  left: 2%;   transform: rotate(-6deg); }
+.frame-pos-2 { top: 2%;  left: 30%;  transform: rotate(3deg);  }
+.frame-pos-3 { top: 5%;  right: 2%;  transform: rotate(-4deg); }
+
+/* Middle flanking */
+.frame-pos-4 { top: 40%; left: 2%;   transform: rotate(7deg);  }
+.frame-pos-5 { top: 38%; right: 2%;  transform: rotate(-3deg); }
+
+/* Bottom row — shifted inward to avoid overlap with middle flanking */
+.frame-pos-6 { top: 62%; left: 20%;  transform: rotate(5deg);  }
+.frame-pos-7 { top: 60%; right: 12%; transform: rotate(-2deg); }
+
+/* Baby — centered */
+.frame-pos-baby {
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%) rotate(1deg);
+  z-index: 10;
+}
+
+/* ─── Label below frame ─────────────────────────────────────────────────── */
+.frame-label {
+  position: absolute;
+  bottom: -56px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.frame-label-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2a3d1a;
+  display: block;
+}
+.frame-label-roles {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  font-style: italic;
+  color: #4a6a3a;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Baby label */
+.frame-pos-baby .frame-label .frame-label-name {
+  font-size: 16px;
+  color: #7a5800;
+}
+.frame-pos-baby .frame-label .frame-label-roles {
+  font-size: 12px;
+  color: #9a7000;
+}
+
+/* ─── Add placeholder frame ─────────────────────────────────────────────── */
+.frame-add-placeholder {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #68a068;
+  background: rgba(104,160,104,0.08);
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+.frame-add-placeholder:hover { opacity: 1; }
+.frame-add-placeholder span {
+  font-size: 2.5rem;
+  color: #68a068;
+  line-height: 1;
+}
+
+/* ─── Tablet (768px – 900px): 3-column flex ─────────────────────────────── */
+@media (max-width: 900px) {
+  .frame-card,
+  .frame-add-placeholder {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 8px;
+  }
+  .frame-baby::before { display: none; }
+
+  /* Tablet sizes (slightly smaller than desktop) */
+  .frame-1  { width: 165px; height: 190px; }
+  .frame-2  { width: 180px; height: 198px; }
+  .frame-3  { width: 185px; height: 215px; }
+  .frame-4  { width: 160px; height: 194px; }
+  .frame-5  { width: 175px; height: 194px; }
+  .frame-6  { width: 165px; height: 165px; }
+  .frame-7  { width: 190px; height: 210px; }
+  .frame-baby { width: 210px; height: 240px; }
+
+  /* Slight rotations */
+  .frame-pos-1 { transform: rotate(-4deg); }
+  .frame-pos-2 { transform: rotate(2deg);  }
+  .frame-pos-3 { transform: rotate(-3deg); }
+  .frame-pos-4 { transform: rotate(4deg);  }
+  .frame-pos-5 { transform: rotate(-2deg); }
+  .frame-pos-6 { transform: rotate(3deg);  }
+  .frame-pos-7 { transform: rotate(-2deg); }
+  .frame-pos-baby { transform: rotate(0deg); }
+}
+
+/* ─── Mobile (< 768px): 2-column grid ───────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Family frames fill the grid column */
+  .frame-1, .frame-2, .frame-3, .frame-4,
+  .frame-5, .frame-6, .frame-7 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  /* Fixed photo area height for all family frames */
+  .frame-1 .frame-inner,
+  .frame-2 .frame-inner,
+  .frame-3 .frame-inner,
+  .frame-4 .frame-inner,
+  .frame-5 .frame-inner,
+  .frame-6 .frame-inner,
+  .frame-7 .frame-inner {
+    height: 130px;
+  }
+
+  /* Round/oval frames become rounded-rectangle on mobile */
+  .frame-1 { border-radius: 14px; }
+  .frame-1 .frame-inner { border-radius: 10px; }
+  .frame-6 { border-radius: 14px; background: #5C4208; }
+  .frame-6 .frame-inner { border-radius: 10px; }
+
+  /* Baby frame: fixed size, centered */
+  .frame-baby {
+    width: min(240px, 92vw);
+    height: auto;
+    min-height: 260px;
+    margin: 0 auto;
+  }
+  .frame-baby .frame-inner {
+    height: 220px;
+  }
+
+  /* Very slight rotations only */
+  .frame-pos-1 { transform: rotate(-2deg); }
+  .frame-pos-2 { transform: rotate(1deg);  }
+  .frame-pos-3 { transform: rotate(-1deg); }
+  .frame-pos-4 { transform: rotate(2deg);  }
+  .frame-pos-5 { transform: rotate(-1deg); }
+  .frame-pos-6 { transform: rotate(1deg);  }
+  .frame-pos-7 { transform: rotate(-1deg); }
+  .frame-pos-baby { transform: rotate(0deg); }
+
+  .frame-label-name  { font-size: 12px; }
+  .frame-label-roles { font-size: 9px;  }
+}
